@@ -16,10 +16,6 @@ export default {
     return {
       items: [
         {
-          name: 'Home',
-          to: '/'
-        },
-        {
           name: 'Work',
           to: '/work',
           subNav: [
@@ -64,11 +60,11 @@ export default {
           ]
         },
         {
-          name: 'Career Summary',
+          name: 'Career',
           to: '/career-summary'
         },
         {
-          name: 'Get in Touch',
+          name: 'Contact',
           to: '/contact'
         }
       ]
