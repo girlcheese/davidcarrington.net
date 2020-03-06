@@ -33,7 +33,7 @@ export default {
             },
             {
               name: 'Speaking Engagements 2007-2020',
-              to: '/work/speaking-engagements-2001-2006'
+              to: '/work/speaking-engagements'
             },
             {
               name: 'Speaking Engagements 2001-2006',
@@ -50,12 +50,8 @@ export default {
           ]
         },
         {
-          name: 'Board & Committee Membership',
+          name: 'Boards & Committees',
           to: '/board-committee-membership/'
-        },
-        {
-          name: 'Career Summary',
-          to: '/career-summary'
         },
         {
           name: 'Articles & Talks',
@@ -68,10 +64,21 @@ export default {
           ]
         },
         {
+          name: 'Career Summary',
+          to: '/career-summary'
+        },
+        {
           name: 'Get in Touch',
           to: '/contact'
         }
       ]
+    }
+  },
+  head() {
+    return {
+      bodyAttrs: {
+        class: 'bg-gray-100 tracking-wider tracking-normal'
+      }
     }
   }
 }
