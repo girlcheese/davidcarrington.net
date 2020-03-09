@@ -43,8 +43,15 @@
         id="nav-content"
         class="w-full flex-grow lg:flex lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20"
       >
-        <ul class="list-reset lg:flex justify-end items-center">
-          <li v-for="(item, i) in items" :key="i" class="mr-3 py-2 lg:py-0">
+        <ul
+          v-if="navigation"
+          class="list-reset lg:flex justify-end items-center"
+        >
+          <li
+            v-for="(item, i) in navigation.items"
+            :key="i"
+            class="mr-3 py-2 lg:py-0"
+          >
             <nuxt-link
               :to="item.to"
               class="inline-block py-2 px-4 text-gray-900 font-bold no-underline"
@@ -58,14 +65,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'DcNavigation',
   components: {},
-  props: {
-    items: {
-      type: Array,
-      default: null
-    }
+  computed: {
+    ...mapState(['navigation'])
   },
   methods: {
     navToggle() {}

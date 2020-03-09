@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="test">
-      <dc-navigation :items="items"></dc-navigation>
+      <dc-navigation :items="navigation"></dc-navigation>
     </div>
     <nuxt />
   </div>
@@ -14,8 +14,8 @@ export default {
   },
   data() {
     return {
-      items: [
-        {
+      navigation: {
+        work: {
           name: 'Work',
           to: '/work',
           subNav: [
@@ -45,11 +45,11 @@ export default {
             }
           ]
         },
-        {
+        boards: {
           name: 'Boards & Committees',
           to: '/board-committee-membership/'
         },
-        {
+        articles: {
           name: 'Articles & Talks',
           to: '/articles-talks',
           subNav: [
@@ -59,15 +59,15 @@ export default {
             }
           ]
         },
-        {
+        career: {
           name: 'Career',
           to: '/career-summary'
         },
-        {
+        contact: {
           name: 'Contact',
           to: '/contact'
         }
-      ]
+      }
     }
   },
   head() {

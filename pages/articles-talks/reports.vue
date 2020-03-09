@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'WorkIndex'
+  name: 'Reports'
 }
 </script>
 
