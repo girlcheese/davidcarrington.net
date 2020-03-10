@@ -127,4 +127,7 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+a {
+  color: brown;
+}
 </style>

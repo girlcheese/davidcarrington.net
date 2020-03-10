@@ -23,9 +23,9 @@
       </button>
     </div>
     <div
+      id="menu-content"
       class="w-full sticky inset-0 hidden h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20"
       style="top:5em;"
-      id="menu-content"
     >
       <ul :v-if="navigation.items[currentPage].subNav" class="list-reset">
         <li

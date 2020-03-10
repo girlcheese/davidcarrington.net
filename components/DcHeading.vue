@@ -6,9 +6,9 @@
       class="text-base md:text-sm text-purple-500 font-bold no-underline hover:underline"
       >Back Link</a
     >
-    <h1 class="font-sans break-normal text-gray-900 pt-6 pb-2 text-xl">
+    <h2>
       <slot></slot>
-    </h1>
+    </h2>
     <hr class="border-b border-gray-400" />
   </div>
 </template>
@@ -19,4 +19,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+h2 {
+  @apply font-sans break-normal text-gray-900 pt-6 pb-2 text-2xl font-bold;
+}
+</style>

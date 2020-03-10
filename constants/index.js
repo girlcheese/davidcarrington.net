@@ -13,4 +13,8 @@ const MONTHS = [
   'December'
 ]
 
-export { MONTHS }
+const DOWNLOADS_BASE_URL =
+  // 'https://s3.eu-west-2.amazonaws.com/downloads.davidcarrington.net'
+  'https://downloads.davidcarrington.net'
+
+export { MONTHS, DOWNLOADS_BASE_URL }

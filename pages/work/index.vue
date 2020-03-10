@@ -8,7 +8,7 @@
     >
       <dc-heading>My Work</dc-heading>
       <p>I work in the UK and internationally with:</p>
-      <ul>
+      <ul class="list-disc">
         <li>
           Funder organisations in the charitable, statutory and corporate
           sectors
@@ -25,7 +25,7 @@
       </ul>
       <p>On:</p>
 
-      <ul>
+      <ul class="list-disc">
         <li>
           The review and evaluation of existing strategies, governance,
           programmes and practice
@@ -67,6 +67,16 @@ export default {
   components: {
     DcPageNav,
     DcHeading
+  },
+  data() {
+    return {
+      title: 'My Work - David Carrington'
+    }
+  },
+  head() {
+    return {
+      title: this.title
+    }
   }
 }
 </script>
@@ -76,6 +86,6 @@ p {
   @apply pt-4;
 }
 li {
-  @apply pt-2;
+  @apply pt-2 ml-4;
 }
 </style>

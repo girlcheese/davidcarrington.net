@@ -8,7 +8,7 @@
     >
       <dc-heading>Articles & Talks</dc-heading>
 
-      <p>
+      <p class="text-xl">
         I have written for various publications and spoken at many conferences
         and seminars. Some of the articles and talks are available here, and
         listed below.
@@ -16,9 +16,11 @@
 
       <ul>
         <li v-for="(item, index) in articles.list" :key="index">
-          <strong>{{ item.title }}</strong> - {{ item.description }} ({{
-            getDate(item.date)
-          }})
+          <a v-if="item.link" :href="getLink(item.link)"
+            ><strong>{{ item.title }}</strong></a
+          >
+          <strong v-else>{{ item.title }}</strong>
+          - {{ item.description }} ({{ getDate(item.date) }})
         </li>
       </ul>
     </div>
@@ -29,7 +31,7 @@
 import { mapState } from 'vuex'
 import DcPageNav from '../../components/DcPageNav'
 import DcHeading from '~/components/DcHeading'
-import { MONTHS } from '~/constants'
+import { MONTHS, DOWNLOADS_BASE_URL } from '~/constants'
 
 export default {
   name: 'WorkIndex',
@@ -56,6 +58,12 @@ export default {
       // } else {
       //   return year
       // }
+    },
+    getLink(doc) {
+      if (doc.indexOf('://') > 0) {
+        return doc
+      }
+      return [DOWNLOADS_BASE_URL, doc].join('/')
     }
   }
 }
