@@ -1,49 +1,57 @@
 <template>
-  <div class="container">
-    <h1 class="text-4xl font-black mb-4">Get in Touch</h1>
-    <form action="/contact/success"></form>
-    <div class="mb-4 relative">
-      <input
-        class="input"
-        id="contactName"
-        type="text"
-        autofocus
-        @keyup="toggleInputContainer"
-      />
-      <label
-        for="contactName"
-        class="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-400 text-base mt-2 cursor-text"
-        >Name</label
-      >
-    </div>
-    <div class="mb-4 relative">
-      <input
-        id="email"
-        class="input"
-        type="text"
-        autofocus
-        @keyup="toggleInputContainer"
-        @change="validateEmail"
-      />
-      <label
-        for="email"
-        class="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-400 text-base mt-2 cursor-text"
-        >Email Address</label
-      >
-    </div>
-    <div class="mb-4 relative">
-      <textarea
-        id="contactMessage"
-        class="input border border-gray-400 appearance-none rounded w-full px-3 py-3 pt-5 pb-2 focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600"
-        type="text"
-        autofocus
-        @keyup="toggleInputContainer"
-      />
-      <label
-        for="contactMessage"
-        class="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-400 text-base mt-2 cursor-text"
-        >Message</label
-      >
+  <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+    <!-- in-page menu -->
+    <dc-page-nav :current-page="'work'"></dc-page-nav>
+    <!-- page content -->
+    <div
+      class="w-full lg:w-4/5 p-8 mt-6 lg:mt-0 text-gray-900 leading-normal bg-white border border-gray-400 border-rounded"
+    >
+      <dc-heading>Get in Touch</dc-heading>
+      <form action="/contact/success">
+        <div class="mb-4 relative">
+          <input
+            id="contactName"
+            class="input"
+            type="text"
+            autofocus
+            @keyup="toggleInputContainer"
+          />
+          <label
+            for="contactName"
+            class="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-400 text-base mt-2 cursor-text"
+            >Name</label
+          >
+        </div>
+        <div class="mb-4 relative">
+          <input
+            id="email"
+            class="input"
+            type="text"
+            autofocus
+            @keyup="toggleInputContainer"
+            @change="validateEmail"
+          />
+          <label
+            for="email"
+            class="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-400 text-base mt-2 cursor-text"
+            >Email Address</label
+          >
+        </div>
+        <div class="mb-4 relative">
+          <textarea
+            id="contactMessage"
+            class="input border border-gray-400 appearance-none rounded w-full px-3 py-3 pt-5 pb-2 focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600"
+            type="text"
+            autofocus
+            @keyup="toggleInputContainer"
+          />
+          <label
+            for="contactMessage"
+            class="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-400 text-base mt-2 cursor-text"
+            >Message</label
+          >
+        </div>
+      </form>
     </div>
   </div>
 </template>

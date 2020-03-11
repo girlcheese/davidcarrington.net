@@ -1,16 +1,18 @@
 <template>
   <div>
-    <div class="test">
-      <dc-navigation :items="navigation"></dc-navigation>
-    </div>
+    <dc-navigation :items="navigation"></dc-navigation>
     <nuxt />
+    <dc-footer></dc-footer>
   </div>
 </template>
 <script>
 import DcNavigation from '~/components/DcNavigation'
+import DcFooter from '~/components/DcFooter'
+
 export default {
   components: {
-    DcNavigation
+    DcNavigation,
+    DcFooter
   },
   data() {
     return {

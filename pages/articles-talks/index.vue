@@ -16,11 +16,11 @@
 
       <ul>
         <li v-for="(item, index) in articles.list" :key="index">
-          <a v-if="item.link" :href="getLink(item.link)"
-            ><strong>{{ item.title }}</strong></a
-          >
-          <strong v-else>{{ item.title }}</strong>
-          - {{ item.description }} ({{ getDate(item.date) }})
+          <dc-list-tile
+            :title="item.title"
+            :link="item.link"
+            :description="`${item.description} (${getDate(item.date)})`"
+          ></dc-list-tile>
         </li>
       </ul>
     </div>
@@ -29,15 +29,18 @@
 
 <script>
 import { mapState } from 'vuex'
-import DcPageNav from '../../components/DcPageNav'
+import DcPageNav from '~/components/DcPageNav'
 import DcHeading from '~/components/DcHeading'
-import { MONTHS, DOWNLOADS_BASE_URL } from '~/constants'
+import DcListTile from '~/components/DcListTile'
+
+import { MONTHS } from '~/constants'
 
 export default {
   name: 'WorkIndex',
   components: {
     DcPageNav,
-    DcHeading
+    DcHeading,
+    DcListTile
   },
   computed: {
     ...mapState(['articles'])
@@ -52,18 +55,6 @@ export default {
       } else {
         return year
       }
-      //
-      // if (month) {
-      //   return `${MONTHS[month - 1]} ${year}`
-      // } else {
-      //   return year
-      // }
-    },
-    getLink(doc) {
-      if (doc.indexOf('://') > 0) {
-        return doc
-      }
-      return [DOWNLOADS_BASE_URL, doc].join('/')
     }
   }
 }

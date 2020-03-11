@@ -67,9 +67,11 @@ export default {
         },
         {
           title: 'London Borough of Lambeth',
-          description:
-            'Social Worker (Unqualified) (1970-1972) Northorpe Hall, Mirfield\n' +
-            '        Assistant Director (1968-1970)'
+          description: 'Social Worker (Unqualified) (1970-1972)'
+        },
+        {
+          title: 'Northorpe Hall, Mirfield',
+          description: 'Assistant Director (1968-1970)'
         }
       ]
     }

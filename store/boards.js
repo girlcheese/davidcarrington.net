@@ -365,15 +365,27 @@ export const state = () => ({
 
 export const getters = {
   getByYear: (state) => (start, end) => {
+    // const list = state.list.filter((item) => {
+    //   // console.log(item.dates.start, start)
+    //   return parseInt(item.dates.start, 10) > start
+    // })
     let myStart = parseInt(start, 10)
-    const myEnd = parseInt(end, 10)
+    const myEnd = end ? parseInt(end, 10) : null
     myStart = start | 1900
-    if (typeof myEnd === 'number') {
-      return state.list.find((item) => {
-        return item.start >= myStart && (item.end < myEnd || item.end === '')
+    let outList = []
+    if (myEnd) {
+      outList = state.list.find((item) => {
+        return (
+          item.dates.start >= myStart &&
+          (parseInt(item.dates.end, 10) < myEnd || item.dates.end === '')
+        )
       })
     } else {
-      return state.list.find((item) => item.start >= myStart)
+      outList = state.list.find(
+        (item) => parseInt(item.dates.start, 10) >= myStart
+      )
     }
+    console.log(outList)
+    return outList
   }
 }
