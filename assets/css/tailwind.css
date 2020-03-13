@@ -1,3 +1,9 @@
+/* vars */
+:root {
+  --color-primary: #5c6ac4;
+  --color-secondary: #ecc94b;
+}
+
 /* purgecss start ignore */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';

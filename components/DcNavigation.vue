@@ -8,7 +8,7 @@
     >
       <div class="pl-4 flex items-center">
         <svg
-          class="h-5 pr-3 fill-current text-purple-500"
+          class="h-5 pr-3 fill-current text-brown"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >
