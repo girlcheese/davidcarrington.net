@@ -4,7 +4,17 @@
 
 <script>
 export default {
-  name: 'ConsultancyProjects'
+  name: 'ConsultancyProjects',
+  data() {
+    return {
+      title: 'Consultancy Projects, 2001-2006 - David Carrington'
+    }
+  },
+  head() {
+    return {
+      title: this.title
+    }
+  }
 }
 </script>
 

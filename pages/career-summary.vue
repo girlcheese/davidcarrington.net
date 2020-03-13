@@ -1,12 +1,81 @@
 <template>
-  <div class="container">
-    <div>Career Summary</div>
+  <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16">
+    <!-- in-page menu -->
+    <dc-page-nav :current-page="'career'"></dc-page-nav>
+    <!-- page content -->
+    <div
+      class="w-full lg:w-4/5 p-8 mt-6 lg:mt-0 text-gray-900 leading-normal bg-white border border-gray-400 border-rounded"
+    >
+      <dc-heading>Career Summary</dc-heading>
+      <div v-for="(item, i) in items" :key="i" class="pt-4">
+        <h2 class="text-lg font-semibold">{{ item.title }}</h2>
+        <p>{{ item.description }}</p>
+      </div>
+
+      <h2></h2>
+      <p></p>
+    </div>
   </div>
 </template>
 
 <script>
+import DcPageNav from '~/components/DcPageNav'
+import DcHeading from '~/components/DcHeading'
 export default {
-  components: {}
+  components: {
+    DcPageNav,
+    DcHeading
+  },
+  data() {
+    return {
+      items: [
+        {
+          title: 'PPP Foundation (renamed The Health Foundation 2003)',
+          description:
+            'Chief Executive (1998-2001) – setting up a new charity, with an\n' +
+            '        endowment of £540 million, to make grants annually of £20 million to\n' +
+            '        support healthcare and public health projects.'
+        },
+        {
+          title: 'The Baring Foundation',
+          description:
+            'Director (1992-1998) – managing a grant making trust supporting work\n' +
+            '        (£16 million in 1994) across the charitable sector, including education,\n' +
+            '        welfare, health, the environment and the arts; and rebuilding the\n' +
+            '        Foundation after the loss of its main source of income in 1995, while\n' +
+            '        also securing contracts to assist the start-up of other grant makers,\n' +
+            '        such as Bridge House Estates (now renamed as The City Bridge Trust).'
+        },
+        {
+          title: 'Housing Associations Charitable Trust',
+          description: 'Director (1988-1991)'
+        },
+        {
+          title: 'Stonham Housing Association',
+          description: 'Housing Services Manager (1984-1988'
+        },
+        {
+          title: 'Self-employed',
+          description:
+            'Consultancy (1982-1984) – contracts with NCVO, CCETSW, the Local\n' +
+            '        Government Association among others'
+        },
+        {
+          title: 'NACRO',
+          description:
+            'Assistant Director (initially Assistant Training Organiser) (1972-1982)'
+        },
+        {
+          title: 'London Borough of Lambeth',
+          description: 'Social Worker (Unqualified) (1970-1972)'
+        },
+        {
+          title: 'Northorpe Hall, Mirfield',
+          description: 'Assistant Director (1968-1970)'
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -16,34 +85,4 @@ export default {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>

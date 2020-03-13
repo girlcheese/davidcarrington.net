@@ -1,41 +1,62 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap bg-red-100">
-    <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <span class="font-semibold text-xl tracking-tight">David Carrington</span>
-    </div>
-    <div class="block lg:hidden">
-      <button class="flex items-center px-3 py-2 border rounded">
+  <nav
+    id="header"
+    class="fixed w-full z-10 top-0 bg-white border-b border-gray-400"
+  >
+    <div
+      class="w-full  mx-auto flex flex-wrap items-center justify-between mt-0 py-4"
+    >
+      <div class="pl-4 flex items-center">
         <svg
-          class="fill-current h-3 w-3"
-          viewBox="0 0 20 20"
+          class="h-5 pr-3 fill-current text-purple-500"
           xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
         >
-          <title>Menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          <path
+            d="M0 2C0 .9.9 0 2 0h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm14 12h4V2H2v12h4c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2zM5 9l2-2 2 2 4-4 2 2-6 6-4-4z"
+          />
         </svg>
-      </button>
-    </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-      <div class="text-sm lg:flex-grow">
-        <ul class="flex">
+        <nuxt-link
+          class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl"
+          to="/"
+        >
+          David Carrington
+        </nuxt-link>
+      </div>
+      <div class="block lg:hidden pr-4">
+        <button
+          id="nav-toggle"
+          class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-purple-500 appearance-none focus:outline-none"
+          @click="navToggle"
+        >
+          <svg
+            class="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div
+        id="nav-content"
+        class="w-full flex-grow lg:flex lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20"
+      >
+        <ul
+          v-if="navigation"
+          class="list-reset lg:flex justify-end items-center"
+        >
           <li
-            v-for="(item, i) in items"
+            v-for="(item, i) in navigation.items"
             :key="i"
-            class="hover:bg-blue-800 hover:text-white"
+            class="mr-3 py-2 lg:py-0"
           >
             <nuxt-link
               :to="item.to"
-              class="block mt-4 lg:inline-block lg:mt-0 mr-4"
+              class="inline-block py-2 px-4 text-gray-900 font-bold no-underline"
+              >{{ item.name }}</nuxt-link
             >
-              {{ item.name }}
-            </nuxt-link>
-            <ul v-if="item.subNav">
-              <li v-for="(subitem, j) in item.subNav" :key="j">
-                <nuxt-link :to="subitem.to">
-                  {{ subitem.name }}
-                </nuxt-link>
-              </li>
-            </ul>
           </li>
         </ul>
       </div>
@@ -44,32 +65,17 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'DcNavigation',
   components: {},
-  props: {
-    items: {
-      type: Array,
-      default: null
-    }
+  computed: {
+    ...mapState(['navigation'])
+  },
+  methods: {
+    navToggle() {}
   }
 }
 </script>
 
-<style scoped>
-.hoverable {
-  position: static;
-}
-
-.hoverable > a:after {
-  content: '\25BC';
-  font-size: 10px;
-  padding-left: 6px;
-  position: relative;
-  top: -1px;
-}
-
-.hoverable:hover .mega-menu {
-  display: block;
-}
-</style>
+<style scoped></style>

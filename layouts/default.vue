@@ -1,25 +1,23 @@
 <template>
   <div>
-    <div class="test">
-      <dc-navigation :items="items"></dc-navigation>
-    </div>
+    <dc-navigation :items="navigation"></dc-navigation>
     <nuxt />
+    <dc-footer></dc-footer>
   </div>
 </template>
 <script>
 import DcNavigation from '~/components/DcNavigation'
+import DcFooter from '~/components/DcFooter'
+
 export default {
   components: {
-    DcNavigation
+    DcNavigation,
+    DcFooter
   },
   data() {
     return {
-      items: [
-        {
-          name: 'Home',
-          to: '/'
-        },
-        {
+      navigation: {
+        work: {
           name: 'Work',
           to: '/work',
           subNav: [
@@ -33,7 +31,7 @@ export default {
             },
             {
               name: 'Speaking Engagements 2007-2020',
-              to: '/work/speaking-engagements-2001-2006'
+              to: '/work/speaking-engagements'
             },
             {
               name: 'Speaking Engagements 2001-2006',
@@ -49,15 +47,11 @@ export default {
             }
           ]
         },
-        {
-          name: 'Board & Committee Membership',
+        boards: {
+          name: 'Boards & Committees',
           to: '/board-committee-membership/'
         },
-        {
-          name: 'Career Summary',
-          to: '/career-summary'
-        },
-        {
+        articles: {
           name: 'Articles & Talks',
           to: '/articles-talks',
           subNav: [
@@ -67,11 +61,22 @@ export default {
             }
           ]
         },
-        {
-          name: 'Get in Touch',
+        career: {
+          name: 'Career',
+          to: '/career-summary'
+        },
+        contact: {
+          name: 'Contact',
           to: '/contact'
         }
-      ]
+      }
+    }
+  },
+  head() {
+    return {
+      bodyAttrs: {
+        class: 'bg-gray-100 tracking-wider tracking-normal'
+      }
     }
   }
 }
@@ -123,5 +128,8 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+a {
+  color: brown;
 }
 </style>
