@@ -7,7 +7,14 @@
       class="w-full lg:w-4/5 p-8 mt-6 lg:mt-0 text-gray-900 leading-normal bg-white border border-gray-400 border-rounded"
     >
       <dc-heading>Get in Touch</dc-heading>
-      <form action="/contact/success" method="POST" data-netlify="true">
+      <form
+        name="contact-form"
+        action="/contact/success"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact-form" />
         <div class="mb-4 relative">
           <input
             id="contactName"
