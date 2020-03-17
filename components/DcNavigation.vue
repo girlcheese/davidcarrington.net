@@ -41,12 +41,9 @@
       </div>
       <div
         id="nav-content"
-        class="w-full flex-grow lg:flex lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20"
+        class="w-full flex-grow lg:flex lg:content-center lg:items-center lg:w-auto justify-end hidden lg:block mt-2 lg:mt-0 z-20"
       >
-        <ul
-          v-if="navigation"
-          class="list-reset lg:flex justify-end items-center"
-        >
+        <ul v-if="navigation" class="list-reset lg:flex items-center">
           <li
             v-for="(item, i) in navigation.items"
             :key="i"
@@ -78,4 +75,9 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.nuxt-link-active,
+.nuxt-link-exact-active {
+  color: brown;
+}
+</style>
