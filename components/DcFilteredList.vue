@@ -51,6 +51,10 @@ export default {
     filteredList() {
       if (!this.currentFilter.dates) {
         return this.sourceData.list
+          .slice()
+          .sort((a, b) =>
+            a.organisations[0].title.localeCompare(b.organisations[0].title)
+          )
       }
       return this.sourceData.list
         .filter((el) => {

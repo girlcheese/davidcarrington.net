@@ -288,7 +288,8 @@ export const state = () => ({
       month: 6,
       organisations: [
         {
-          title: 'European Foundation Centre'
+          title: 'European Foundation Centre',
+          link: 'http://www.efc.be/'
         }
       ],
       description:
@@ -299,7 +300,8 @@ export const state = () => ({
       month: 4,
       organisations: [
         {
-          title: 'European Foundation Centre'
+          title: 'European Foundation Centre',
+          link: 'http://www.efc.be/'
         }
       ],
       description:
@@ -321,11 +323,75 @@ export const state = () => ({
       month: 2,
       organisations: [
         {
-          title: 'European Foundation Centre'
+          title: 'European Foundation Centre',
+          link: 'http://www.efc.be/'
         }
       ],
       description:
         'Speaker and co-facilitator at an ‘invitation only’ seminar, jointly organised with Rockefeller Philanthropy Advisors for Board members, CEOs and Investment Officers, ‘Connecting Values and Mission with Investments,’ Brussels'
+    },
+    {
+      year: 2009,
+      month: 5,
+      organisations: [
+        {
+          title: 'European Foundation Centre',
+          link: 'http://www.efc.be/'
+        }
+      ],
+      description:
+        'Chair/facilitator of pre-conference event on ‘Life after the Community Philanthropy Initiative: What Next for European and Global Community Philanthropy Networks?’ and moderator of session on ‘Tackling Poverty and Exclusion Together: Can Community Foundations Rise to the Challenge?’ at EFC 20th Annual General Assembly and Conference, ‘Fighting Poverty – Creating Opportunities,’ Rome'
+    },
+    {
+      year: 2011,
+      month: 5,
+      organisations: [
+        {
+          title: 'European Foundation Centre',
+          link: 'http://www.efc.be/'
+        }
+      ],
+      description:
+        'Moderator of session on ‘Adrift in a Sea of Information: Finding the Right Management System’ at EFC 22nd Annual General Assembly and Conference, Resources and Sustainability – the Oceans,’ Cascais, Portugal'
+    },
+    {
+      year: 2010,
+      month: 2,
+      organisations: [
+        {
+          title: 'The European Research Network on Philanthropy (ERNOP)',
+          link: 'http://www.ernop.eu/'
+        }
+      ],
+      description:
+        'speaker on ‘The Application of Learning & Research to the Practice of Philanthropy’ at 3rd ERNOP meeting, Budapest'
+    },
+    {
+      year: 2007,
+      month: 10,
+      organisations: [
+        {
+          title: 'European Venture Philanthropy Association (EVPA)',
+          link: 'http://www.evpa.eu.com/'
+        }
+      ],
+      description: 'speaker at 3rd Annual European Conference, Madrid'
+    },
+    {
+      year: 2015,
+      month: 10,
+      organisations: [
+        {
+          title: 'Foundation North',
+          link: 'http://www.foundationnorth.org.nz/'
+        },
+        {
+          title: 'Centre for Social Impact New Zealand',
+          link: 'https://www.centreforsocialimpact.org.nz/'
+        }
+      ],
+      description:
+        'speaker on developments in social investment and philanthropy at session in Auckland for staff and trustees of Foundation North, Centre for Social Impact, the Tindall Foundation and the Vodafone Foundation'
     },
     /* **/
     {
