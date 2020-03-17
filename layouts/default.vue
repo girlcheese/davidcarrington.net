@@ -75,7 +75,7 @@ export default {
   head() {
     return {
       bodyAttrs: {
-        class: 'bg-gray-100 tracking-wider tracking-normal'
+        class: 'bg-gray-100 tracking-normal'
       }
     }
   }

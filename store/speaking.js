@@ -393,6 +393,42 @@ export const state = () => ({
       description:
         'speaker on developments in social investment and philanthropy at session in Auckland for staff and trustees of Foundation North, Centre for Social Impact, the Tindall Foundation and the Vodafone Foundation'
     },
+    {
+      year: 2016,
+      month: 11,
+      organisations: [
+        {
+          title: 'The Gift Trust',
+          link: 'http://www.thegifttrust.org.nz/'
+        }
+      ],
+      description:
+        'speaker, in conversation with Rod Oram, on ‘Money for Good: The Art of Giving’ hosted by Deloitte New Zealand in Auckland'
+    },
+    {
+      year: 2016,
+      month: 11,
+      organisations: [
+        {
+          title: 'Giving Architects',
+          link: 'https://www.givingarchitects.com/'
+        }
+      ],
+      description:
+        'speaker at meeting in Auckland on social investment convened by Giving Architects with Akina Foundation and AERA Foundation (October 2015); speaker at seminar on ‘Social Investment and Social Enterprise’ hosted by RSM New Zealand, Auckland (November 2016); speaker at workshop sessions on ‘Leveraging Social Investment to Complement Philanthropy’ and on ‘Money for Good – Leveraging Investment’ hosted by Deloitte New Zealand, Auckland'
+    },
+    {
+      year: 2018,
+      month: 4,
+      organisations: [
+        {
+          title: 'Giving Architects',
+          link: 'https://www.givingarchitects.com/'
+        }
+      ],
+      description:
+        'series of talks on ‘Social Impact Investment in the UK: What’s Happened? What’s Worked? What has been Learnt? What Next?’ with INGO leaders (Auckland – hosted by Child Fund), the Waikato Funding Community (Hamilton), an Impact Investing Workshop with Kelly Wachowicz (Catch Invest) hosted by Giving Architects and Envirostrat (Auckland) and a series hosted by EY in Brisbane, Melbourne and Sydney'
+    },
     /* **/
     {
       year: 2004,

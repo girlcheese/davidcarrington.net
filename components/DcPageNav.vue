@@ -64,7 +64,8 @@ export default {
 </script>
 
 <style scoped>
-.nuxt-link-exact-active {
+.nuxt-link-exact-active,
+.nuxt-link-active {
   @apply border-red-600;
 }
 </style>
