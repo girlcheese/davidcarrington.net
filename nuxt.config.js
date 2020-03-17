@@ -59,6 +59,11 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    postcss: {
+      plugins: {
+        'postcss-nested': {}
+      }
+    },
     extend(config, ctx) {}
   }
 }

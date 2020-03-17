@@ -29,9 +29,8 @@ export default {
   },
   methods: {
     getLink(doc) {
-      console.log(typeof doc, doc)
       if (!doc) {
-        return 'null'
+        return null
       }
       if (doc.indexOf('://') > 0) {
         return doc

@@ -385,7 +385,6 @@ export const getters = {
         (item) => parseInt(item.dates.start, 10) >= myStart
       )
     }
-    console.log(outList)
     return outList
   }
 }

@@ -213,7 +213,18 @@ export const state = () => ({
         }
       ],
       description:
-        'speaker at policy review meeting (May 2007); speaker on ‘New Forms of Funding’ and panellist at conference on Investing In Civil Society – Making The Money Go Further'
+        'speaker on ‘New Forms of Funding’ and panellist at conference on Investing In Civil Society – Making The Money Go Further'
+    },
+    {
+      year: 2007,
+      month: 5,
+      organisations: [
+        {
+          title: 'City Bridge Trust',
+          link: 'https://www.citybridgetrust.org.uk/'
+        }
+      ],
+      description: 'speaker at policy review meeting'
     },
     {
       year: 2009,
@@ -271,6 +282,297 @@ export const state = () => ({
       ],
       description:
         'co-speaker on ‘What can a government do to encourage philanthropy and social investment? A look at the “Big Society” policies in the UK’ at ‘Lunch & Learn’ seminar'
+    },
+    {
+      year: 2007,
+      month: 6,
+      organisations: [
+        {
+          title: 'European Foundation Centre'
+        }
+      ],
+      description:
+        'Chair of speakers’ panel on ‘Community Philanthropy Marketplace’ at EFC 18th Annual General Assembly and Conference, ‘New Challenges for Global Philanthropy,’ Madrid'
+    },
+    {
+      year: 2008,
+      month: 4,
+      organisations: [
+        {
+          title: 'European Foundation Centre'
+        }
+      ],
+      description:
+        'Speaker on ‘The Chief Executive and the Foundation Boards – Strategies for Success’ at ‘‘The Board’s Role in Crisis Management – Chief Executives Imperatives’, Milan'
+    },
+    {
+      year: 2008,
+      month: 5,
+      organisations: [
+        {
+          title: 'European Foundation Centre'
+        }
+      ],
+      description:
+        'Chair of speakers’ panel on ‘Mission Connected Investing’ at EFC 19th Annual General Assembly and Conference, ‘Fostering Creativity,’ Istanbul'
+    },
+    {
+      year: 2009,
+      month: 2,
+      organisations: [
+        {
+          title: 'European Foundation Centre'
+        }
+      ],
+      description:
+        'Speaker and co-facilitator at an ‘invitation only’ seminar, jointly organised with Rockefeller Philanthropy Advisors for Board members, CEOs and Investment Officers, ‘Connecting Values and Mission with Investments,’ Brussels'
+    },
+    /* **/
+    {
+      year: 2004,
+      month: 6,
+      organisations: [
+        {
+          title: 'A & B (Arts & Business)'
+        },
+        {
+          title: 'the Jerwood Charity'
+        }
+      ],
+      description:
+        'speaker on ‘The Funding Environment’ at conference on ‘Mission, Models and Money’'
+    },
+    {
+      year: 2005,
+      month: 12,
+      organisations: [
+        {
+          title: 'A & B (Arts & Business)'
+        }
+      ],
+      description: 'speaker on ‘How to Apply to Trusts and Foundations’'
+    },
+    {
+      year: 2005,
+      month: 5,
+      organisations: [
+        {
+          title: 'Allavida'
+        }
+      ],
+      description:
+        'speaker on ‘Social investment and new mechanisms of community development finance: global innovations and local opportunities’, Nairobi; and on ‘Theory of Change: What is it? Why is it Important?’ at residential workshop on ‘Foundations for Social Justice’, Limuru, Kenya'
+    },
+    {
+      year: 2003,
+      month: 10,
+      organisations: [
+        {
+          title:
+            'Asia-Pacific Centre for Philanthropy and Social Investment, Swinburne University of Technology, Melbourne'
+        }
+      ],
+      description:
+        'The 2003 Heloise Waislitz Fellow, lectures in Melbourne and Sydney on ‘How Trusts and Foundations Can Be More Than Grantmakers’; also seminars on, ‘Outcomes and Impact’ and ‘Social Investment & Programme Related Investment’'
+    },
+    {
+      year: 2004,
+      month: 6,
+      organisations: [
+        {
+          title: 'WINGS (Worldwide Initiatives for Grantmaker Support)'
+        }
+      ],
+      description:
+        'speaker on ‘Big Bad Cities – Why is it Proving so Difficult to Start Community Foundations in the Capitals?’ at the European Foundation Centre’s 15th Annual General Assembly & Conference, Athens'
+    },
+    {
+      year: 2002,
+      month: 10,
+      organisations: [
+        {
+          title: 'Association of Charitable Foundations'
+        }
+      ],
+      description:
+        'speaker at ‘Making Funding accessible to Black and Minority Ethnic Groups’ conference'
+    },
+    {
+      year: 2003,
+      month: 4,
+      organisations: [
+        {
+          title: 'Association of Charitable Foundations'
+        }
+      ],
+      description:
+        'speaker on ‘Better Giving in a Changing World – Setting the National Scene’ and ‘Venture Philanthropy – a New Concept or an Old Idea Re-wrapped?’ at National Conference'
+    },
+    {
+      year: 2006,
+      month: 7,
+      organisations: [
+        {
+          title: 'BASSAC (now Locality)'
+        }
+      ],
+      description:
+        'speaker on ‘What Does the Future Hold?’ at Board/Staff Residential'
+    },
+    {
+      year: 2005,
+      month: 4,
+      organisations: [
+        {
+          title: 'BBC'
+        }
+      ],
+      description:
+        'speaker on ‘Silent Significant Revolution – Charities On The March’ at Corporate Social Responsibility Seminar with Children in Need and the World Service Trust, ‘Living Public Impact : Making A Difference Through Effective & Strategic Programmes’'
+    },
+    {
+      year: 2004,
+      month: 7,
+      organisations: [
+        {
+          title: 'Bearhunt'
+        }
+      ],
+      description:
+        'speaker on ‘Outcomes Funding – what is it and what are the consequences?’ at conference on The Big Lottery Fund'
+    },
+    {
+      year: 2004,
+      month: 1,
+      organisations: [
+        {
+          title: 'Bertelsmann and Rockefeller Foundations'
+        }
+      ],
+      description:
+        'The Philanthropy Workshop – speaker on ‘Donor Grantee relations: lessons from the field’ Berlin'
+    },
+    {
+      year: 2005,
+      month: 11,
+      organisations: [
+        {
+          title: 'Big Lottery Fund'
+        }
+      ],
+      description:
+        'co-presenter at staff seminar on ‘The Grant-Making Tango: Issues for Funders’ (November 2004);speaker at Board ‘away-day’ on ‘Different Approaches to Grant-making’'
+    },
+    {
+      year: 2005,
+      month: 9,
+      organisations: [
+        {
+          title: 'Charity Accountants Conference'
+        }
+      ],
+      description:
+        'speaker on ‘Financing the Voluntary and Community Sector – Future Prospects and Possibilities’'
+    },
+    {
+      year: 2001,
+      month: 9,
+      organisations: [
+        {
+          title: 'Council for Advancement and Support of Education (CASE)'
+        }
+      ],
+      description:
+        'speaker on ‘Why Do Trusts and Foundations Keep rejecting My Applications?’ at conference for university development officers and fund-raisers at Heriot-Watt University'
+    },
+    {
+      year: 2001,
+      month: 5,
+      organisations: [
+        {
+          title: 'CFDG (Charity Finance Directors’ Group)'
+        }
+      ],
+      description:
+        'speaker on ‘Social Investment – a Charitable Activity?’ at 10th Annual CFDG Conference'
+    },
+    {
+      year: 2003,
+      month: 5,
+      organisations: [
+        {
+          title: 'Church Urban Fund'
+        }
+      ],
+      description:
+        'speaker at trustees’ special meeting on ‘The Current “World” of Trusts and Foundations’'
+    },
+    {
+      year: 2003,
+      month: 9,
+      organisations: [
+        {
+          title: 'Citizens Advice'
+        }
+      ],
+      description:
+        'speaker on ‘Promoting Value – Demonstrating Success’ at national conference'
+    },
+    {
+      year: 2002,
+      month: 6,
+      organisations: [
+        {
+          title: 'Community Development Finance Association'
+        }
+      ],
+      description:
+        'speaker on ‘Investment by Charities in CDFIs – Programme Related Investment’ at national conference on ‘Risk + Reward + Values’'
+    },
+    {
+      year: 2003,
+      month: 9,
+      organisations: [
+        {
+          title: 'Community Foundation Network'
+        }
+      ],
+      description:
+        'speaker on ‘Outcomes Funding’ at Chair’s event (December 2002); and at sessions on ‘Outcomes Funding’ and on ‘Social Investment’ at national ‘Making Waves’ conference'
+    },
+    {
+      year: 2002,
+      month: 9,
+      organisations: [
+        {
+          title: 'Community Fund (North East & North West Regions)'
+        }
+      ],
+      description:
+        'speaker at a conference and seminars on ‘Outcomes and The Investor Approach’'
+    },
+    {
+      year: 2006,
+      month: 2,
+      organisations: [
+        {
+          title: 'Coutts Bank Philanthropy Services'
+        }
+      ],
+      description:
+        'speaker on ‘Beyond Giving’ at seminar on ‘Increasing Effectiveness’'
+    },
+    {
+      year: 2003,
+      month: 3,
+      organisations: [
+        {
+          title:
+            'Cumbria Funders Forum/Cumbria Voluntary Sector Training Conference'
+        }
+      ],
+      description:
+        'speaker at conference on ‘Outcomes Funding and the Investor Approach’'
     }
   ]
 })
