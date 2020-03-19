@@ -8,14 +8,14 @@
     >
       <dc-heading>Board & Committee Membership</dc-heading>
       <h3 class="font-bold text-xl my-3">
-        Board and Committe Membership 2010 to present
+        Board and Committee Membership 2010 to present
       </h3>
 
       <ul>
         <li v-for="(item, index) in first" :key="index">
           <dc-list-tile
             :title="item.title"
-            :link="'#'"
+            :link="item.link"
             :description="`${item.description} (${getDate(item.dates)})`"
           ></dc-list-tile>
         </li>
@@ -57,7 +57,7 @@ export default {
           return parseInt(el.dates.start, 10) >= 2010
         })
         .sort((a, b) => {
-          return b.title - a.title
+          return a.title.localeCompare(b.title)
         })
     },
     second() {
@@ -66,7 +66,7 @@ export default {
           return parseInt(el.dates.start, 10) < 2010
         })
         .sort((a, b) => {
-          return b.title - a.title
+          return a.title.localeCompare(b.title)
         })
     },
     ...mapState(['boards'])
