@@ -10,6 +10,7 @@
       <button
         id="menu-toggle"
         class="flex w-full justify-end px-3 py-3 bg-white lg:bg-transparent border rounded border-gray-600 hover:border-purple-500 appearance-none focus:outline-none"
+        @click="toggleMenu"
       >
         <svg
           class="fill-current h-3 float-right"
@@ -24,8 +25,9 @@
     </div>
     <div
       id="menu-content"
-      class="w-full sticky inset-0 hidden h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20"
+      class="w-full sticky inset-0 h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20"
       style="top:5em;"
+      :class="navHidden ? 'hidden' : null"
     >
       <ul v-if="navigation.items[currentPage].subNav" class="list-reset">
         <li
@@ -57,8 +59,18 @@ export default {
       default: null
     }
   },
+  data() {
+    return {
+      navHidden: true
+    }
+  },
   computed: {
     ...mapState(['navigation'])
+  },
+  methods: {
+    toggleMenu() {
+      this.navHidden = !this.navHidden
+    }
   }
 }
 </script>

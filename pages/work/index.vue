@@ -7,6 +7,11 @@
       class="w-full lg:w-4/5 p-8 mt-6 lg:mt-0 text-gray-900 leading-normal bg-white border border-gray-400 border-rounded"
     >
       <dc-heading>My Work</dc-heading>
+      <p class="text-xl py-4 mt-4">
+        In all my work, I strive to help organisations strengthen themselves by
+        diversifying the ways they use financial and other resources and by
+        enhancing their standards of governance and management practice.
+      </p>
       <p>I work in the UK and internationally with:</p>
       <ul class="list-disc">
         <li>
@@ -50,12 +55,6 @@
           challenges of leadership, to clarify options and to resolve problems.
         </li>
       </ul>
-
-      <p>
-        In all my work, I strive to help organisations strengthen themselves by
-        diversifying the ways they use financial and other resources and by
-        enhancing their standards of governance and management practice.
-      </p>
     </div>
   </div>
 </template>

@@ -8,10 +8,9 @@
     >
       <dc-heading>Articles & Talks</dc-heading>
 
-      <p class="text-xl">
+      <p class="text-xl py-4 mt-4">
         I have written for various publications and spoken at many conferences
-        and seminars. Some of the articles and talks are available here, and
-        listed below.
+        and seminars. Some of the articles and talks are available here.
       </p>
 
       <ul>

@@ -7,15 +7,7 @@
       class="w-full  mx-auto flex flex-wrap items-center justify-between mt-0 py-4"
     >
       <div class="pl-4 flex items-center">
-        <svg
-          class="h-5 pr-3 fill-current text-brown"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-        >
-          <path
-            d="M0 2C0 .9.9 0 2 0h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm14 12h4V2H2v12h4c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2zM5 9l2-2 2 2 4-4 2 2-6 6-4-4z"
-          />
-        </svg>
+        <div class="avatar mr-4"></div>
         <nuxt-link
           class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl"
           to="/"
@@ -88,5 +80,13 @@ export default {
 .nuxt-link-active,
 .nuxt-link-exact-active {
   color: brown;
+}
+.avatar {
+  background-image: url('/images/avatar.jpg');
+  background-size: cover;
+  background-position: top center;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
 }
 </style>

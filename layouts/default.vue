@@ -1,6 +1,6 @@
 <template>
   <div>
-    <dc-navigation :items="navigation"></dc-navigation>
+    <dc-navigation></dc-navigation>
     <nuxt />
     <dc-footer></dc-footer>
   </div>
