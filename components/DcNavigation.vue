@@ -41,7 +41,9 @@
       </div>
       <div
         id="nav-content"
-        class="w-full flex-grow lg:flex lg:content-center lg:items-center lg:w-auto justify-end hidden lg:block mt-2 lg:mt-0 z-20"
+        ref="mainNav"
+        class="w-full flex-grow lg:flex lg:content-center lg:items-center lg:w-auto justify-end lg:block mt-2 lg:mt-0 z-20"
+        :class="navHidden ? 'hidden' : null"
       >
         <ul v-if="navigation" class="list-reset lg:flex items-center">
           <li
@@ -66,11 +68,18 @@ import { mapState } from 'vuex'
 export default {
   name: 'DcNavigation',
   components: {},
+  data() {
+    return {
+      navHidden: true
+    }
+  },
   computed: {
     ...mapState(['navigation'])
   },
   methods: {
-    navToggle() {}
+    navToggle() {
+      this.navHidden = !this.navHidden
+    }
   }
 }
 </script>

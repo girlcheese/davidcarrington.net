@@ -1,7 +1,7 @@
 <template>
   <div class="w-full lg:w-1/5 lg:px-6 text-xl text-gray-800 leading-normal">
     <p
-      :v-if="navigation.items[currentPage]"
+      v-if="navigation.items[currentPage]"
       class="text-base font-bold py-2 lg:pb-6 text-gray-700"
     >
       {{ navigation.items[currentPage].name }}
@@ -27,7 +27,7 @@
       class="w-full sticky inset-0 hidden h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20"
       style="top:5em;"
     >
-      <ul :v-if="navigation.items[currentPage].subNav" class="list-reset">
+      <ul v-if="navigation.items[currentPage].subNav" class="list-reset">
         <li
           v-for="(el, i) in navigation.items[currentPage].subNav"
           :key="i"
