@@ -1,7 +1,7 @@
 <template>
   <nav
     id="header"
-    class="fixed w-full z-10 top-0 bg-white border-b border-gray-400"
+    class="fixed w-full top-0 bg-white border-b border-gray-400 z-30"
   >
     <div
       class="w-full  mx-auto flex flex-wrap items-center justify-between mt-0 py-4"
@@ -31,26 +31,28 @@
           </svg>
         </button>
       </div>
-      <div
-        id="nav-content"
-        ref="mainNav"
-        class="w-full flex-grow lg:flex lg:content-center lg:items-center lg:w-auto justify-end lg:block mt-2 lg:mt-0 z-20"
-        :class="navHidden ? 'hidden' : null"
-      >
-        <ul v-if="navigation" class="list-reset lg:flex items-center">
-          <li
-            v-for="(item, i) in navigation.items"
-            :key="i"
-            class="mr-3 py-2 lg:py-0"
-          >
-            <nuxt-link
-              :to="item.to"
-              class="inline-block py-2 px-4 text-gray-900 font-bold no-underline"
-              >{{ item.name }}</nuxt-link
+      <transition name="slide">
+        <div
+          id="nav-content"
+          ref="mainNav"
+          class="w-full flex-grow lg:flex lg:content-center lg:items-center lg:w-auto justify-end lg:block mt-2 lg:mt-0"
+          :class="navHidden ? 'hidden' : null"
+        >
+          <ul v-if="navigation" class="list-reset lg:flex items-center">
+            <li
+              v-for="(item, i) in navigation.items"
+              :key="i"
+              class="mr-3 py-2 lg:py-0"
             >
-          </li>
-        </ul>
-      </div>
+              <nuxt-link
+                :to="item.to"
+                class="inline-block py-2 px-4 text-gray-900 font-bold no-underline"
+                >{{ item.name }}</nuxt-link
+              >
+            </li>
+          </ul>
+        </div>
+      </transition>
     </div>
   </nav>
 </template>
@@ -88,5 +90,12 @@ export default {
   border-radius: 50%;
   width: 64px;
   height: 64px;
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition: height 0.5s;
+}
+.slide-enter, .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  height: 0;
 }
 </style>
