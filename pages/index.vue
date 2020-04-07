@@ -4,7 +4,7 @@
       <div class="container mx-auto px-6">
         <div class="flex mb-4">
           <div class="w-3/4">
-            <p class="pr-2">
+            <p class="pr-3 md:text-xl lg:text-2xl">
               I have been an independent consultant since 2001, working on the
               development of social impact investing, on the promotion of
               personal philanthropy and on the funding and governance of
@@ -18,10 +18,12 @@
           <div class="w-1/4">
             <figure>
               <img
-                src="~/static/images/CarringtonDavid.credit-Fergus-Burnett11.jpg"
+                src="~/assets/images/CarringtonDavid.credit-Fergus-Burnett11.jpg"
                 alt="David Carrington - Portrait"
               />
-              <figcaption>Photo Credit Fergus Burnett</figcaption>
+              <figcaption class="text-sm align-t">
+                Photo Credit Fergus Burnett
+              </figcaption>
             </figure>
           </div>
         </div>

@@ -29,7 +29,7 @@
         <li v-for="(item, index) in second" :key="index">
           <dc-list-tile
             :title="item.title"
-            :link="'#'"
+            :link="item.link"
             :description="`${item.description} (${getDate(item.dates)})`"
           ></dc-list-tile>
         </li>

@@ -155,15 +155,6 @@ export const state = () => ({
       link: 'http://www.triodos.com/'
     },
     {
-      title: 'Gulan',
-      description: 'Trustee',
-      dates: {
-        start: '2008',
-        end: null
-      },
-      link: 'http://www.gulan.org.uk/'
-    },
-    {
       title: 'Alliance Publishing Trust',
       description: 'founder Trustee and Director 2007-2014, Chair',
       dates: {

@@ -1,15 +1,18 @@
 <template>
   <nav
     id="header"
-    class="fixed w-full top-0 bg-white border-b border-gray-400 z-30"
+    class="fixed w-full top-0 z-30 topnav"
+    :class="{
+      filled: offset > 60 || !navHidden
+    }"
   >
     <div
-      class="w-full  mx-auto flex flex-wrap items-center justify-between mt-0 py-4"
+      class="w-full mx-auto flex flex-wrap items-center justify-between mt-0 py-4"
     >
       <div class="pl-4 flex items-center">
         <div class="avatar mr-4"></div>
         <nuxt-link
-          class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl"
+          class="topnav__title text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl"
           to="/"
         >
           David Carrington
@@ -42,11 +45,12 @@
             <li
               v-for="(item, i) in navigation.items"
               :key="i"
-              class="mr-3 py-2 lg:py-0"
+              class="py-2 lg:py-0"
             >
               <nuxt-link
                 :to="item.to"
-                class="inline-block py-2 px-4 text-gray-900 font-bold no-underline"
+                class="inline-block py-2 px-4 text-gray-900 font-bold no-underline hover:text-red-600"
+                @click="navHide"
                 >{{ item.name }}</nuxt-link
               >
             </li>
@@ -62,9 +66,16 @@ import { mapState } from 'vuex'
 export default {
   name: 'DcNavigation',
   components: {},
+  props: {
+    offset: {
+      type: Number,
+      default: 0
+    }
+  },
   data() {
     return {
-      navHidden: true
+      navHidden: true,
+      isFilled: false
     }
   },
   computed: {
@@ -73,6 +84,11 @@ export default {
   methods: {
     navToggle() {
       this.navHidden = !this.navHidden
+    },
+    navHide() {
+      // eslint-ignore-next-line
+      console.log('navHide', this.navHidden)
+      this.navHidden = true
     }
   }
 }
@@ -84,18 +100,29 @@ export default {
   color: brown;
 }
 .avatar {
-  background-image: url('/images/avatar.jpg');
+  background-image: url('~assets/images/avatar.jpg');
   background-size: cover;
   background-position: top center;
   border-radius: 50%;
   width: 64px;
   height: 64px;
 }
-.slide-enter-active,
-.slide-leave-active {
-  transition: height 0.5s;
+.topnav {
+  transition: all 0.5s;
 }
+
+/*.topnav__title {*/
+/*  color: white;*/
+/*}*/
+
 .slide-enter, .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
   height: 0;
 }
+.filled {
+  @apply bg-white .shadow-sm;
+}
+
+/*.filled .topnav__title {*/
+/*  color: brown;*/
+/*}*/
 </style>

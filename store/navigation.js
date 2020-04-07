@@ -1,3 +1,5 @@
+import { toggle } from 'vuex-intern'
+
 export const state = () => ({
   items: {
     work: {
@@ -58,5 +60,12 @@ export const state = () => ({
       name: 'Contact',
       to: '/contact'
     }
+  },
+  config: {
+    filled: true
   }
 })
+
+export const mutations = {
+  toggleFilled: toggle('config.filled')
+}

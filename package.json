@@ -15,7 +15,10 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
-    "nuxt": "^2.0.0"
+    "lodash": "^4.17.15",
+    "nuxt": "^2.12.1",
+    "vue-scroll": "^2.1.13",
+    "vuex-intern": "^0.0.3"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
