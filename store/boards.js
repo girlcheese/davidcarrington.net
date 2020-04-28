@@ -6,7 +6,8 @@ export const state = () => ({
       dates: {
         start: '2020',
         end: null
-      }
+      },
+      link: 'https://theline.org'
     },
     {
       title: 'A & B (Arts and Business) Individual Giving Project',
