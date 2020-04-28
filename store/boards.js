@@ -1,6 +1,14 @@
 export const state = () => ({
   list: [
     {
+      title: 'The Line',
+      description: 'Member of the Advisory Board',
+      dates: {
+        start: '2020',
+        end: null
+      }
+    },
+    {
       title: 'A & B (Arts and Business) Individual Giving Project',
       description: 'Steering Group member',
       dates: {
