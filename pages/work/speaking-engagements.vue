@@ -7,11 +7,11 @@
       class="w-full lg:w-4/5 p-8 mt-6 lg:mt-0 text-gray-900 leading-normal bg-white border border-gray-400 border-rounded"
     >
       <dc-heading>Speaking Engagements</dc-heading>
-      <ul>
-        <li v-for="(item, index) in speaking.list" :key="index" class="pt-4">
-          <dc-speaking :item="item"></dc-speaking>
-        </li>
-      </ul>
+
+      <dc-filtered-list
+        :filters="filters"
+        :source-data="speaking"
+      ></dc-filtered-list>
     </div>
   </div>
 </template>
@@ -20,14 +20,42 @@
 import { mapState } from 'vuex'
 import DcHeading from '~/components/DcHeading'
 import DcPageNav from '~/components/DcPageNav'
-import DcSpeaking from '~/components/DcSpeaking'
+// import DcSpeaking from '~/components/DcSpeaking'
+import DcFilteredList from '~/components/DcFilteredList'
 
 export default {
   name: 'SpeakingEngagements',
   components: {
     DcHeading,
     DcPageNav,
-    DcSpeaking
+    // DcSpeaking,
+    DcFilteredList
+  },
+  data() {
+    return {
+      filters: [
+        {
+          label: '2001-2005',
+          dates: {
+            start: 2001,
+            end: 2005
+          }
+        },
+        {
+          label: '2006-2010',
+          dates: {
+            start: 2006,
+            end: 2010
+          }
+        },
+        {
+          label: '2011-2020',
+          dates: {
+            start: 2011
+          }
+        }
+      ]
+    }
   },
   computed: {
     ...mapState(['speaking'])

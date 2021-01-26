@@ -1,6 +1,15 @@
 export const state = () => ({
   list: [
     {
+      title: 'The Line',
+      description: 'Member of the Advisory Board',
+      dates: {
+        start: '2020',
+        end: null
+      },
+      link: 'https://theline.org'
+    },
+    {
       title: 'A & B (Arts and Business) Individual Giving Project',
       description: 'Steering Group member',
       dates: {
@@ -153,15 +162,6 @@ export const state = () => ({
         end: '2017'
       },
       link: 'http://www.triodos.com/'
-    },
-    {
-      title: 'Gulan',
-      description: 'Trustee',
-      dates: {
-        start: '2008',
-        end: null
-      },
-      link: 'http://www.gulan.org.uk/'
     },
     {
       title: 'Alliance Publishing Trust',
@@ -385,7 +385,6 @@ export const getters = {
         (item) => parseInt(item.dates.start, 10) >= myStart
       )
     }
-    console.log(outList)
     return outList
   }
 }

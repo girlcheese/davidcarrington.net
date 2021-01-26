@@ -7,7 +7,15 @@
       class="w-full lg:w-4/5 p-8 mt-6 lg:mt-0 text-gray-900 leading-normal bg-white border border-gray-400 border-rounded"
     >
       <dc-heading>Get in Touch</dc-heading>
-      <form action="/contact/success" method="POST" data-netlify="true">
+      <form
+        name="contact-form"
+        action="/contact/success"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        class="pt-4"
+      >
+        <input type="hidden" name="form-name" value="contact-form" />
         <div class="mb-4 relative">
           <input
             id="contactName"
@@ -58,8 +66,13 @@
 </template>
 
 <script>
+import DcHeading from '~/components/DcHeading'
+import DcPageNav from '~/components/DcPageNav'
 export default {
-  components: {},
+  components: {
+    DcHeading,
+    DcPageNav
+  },
   methods: {
     toggleInputContainer(event) {
       if (event.target.value !== '') {
@@ -68,7 +81,7 @@ export default {
         event.target.classList.remove('filled')
       }
     },
-    validatEmail(event) {}
+    validateEmail(event) {}
   }
 }
 </script>

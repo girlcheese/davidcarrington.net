@@ -1,23 +1,18 @@
 <template>
   <nav
     id="header"
-    class="fixed w-full z-10 top-0 bg-white border-b border-gray-400"
+    class="fixed w-full top-0 z-30 topnav"
+    :class="{
+      filled: offset > 60 || !navHidden
+    }"
   >
     <div
-      class="w-full  mx-auto flex flex-wrap items-center justify-between mt-0 py-4"
+      class="w-full mx-auto flex flex-wrap items-center justify-between mt-0 py-4"
     >
       <div class="pl-4 flex items-center">
-        <svg
-          class="h-5 pr-3 fill-current text-purple-500"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-        >
-          <path
-            d="M0 2C0 .9.9 0 2 0h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm14 12h4V2H2v12h4c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2zM5 9l2-2 2 2 4-4 2 2-6 6-4-4z"
-          />
-        </svg>
+        <div class="avatar mr-4"></div>
         <nuxt-link
-          class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl"
+          class="topnav__title text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl"
           to="/"
         >
           David Carrington
@@ -39,27 +34,29 @@
           </svg>
         </button>
       </div>
-      <div
-        id="nav-content"
-        class="w-full flex-grow lg:flex lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20"
-      >
-        <ul
-          v-if="navigation"
-          class="list-reset lg:flex justify-end items-center"
+      <transition name="slide">
+        <div
+          id="nav-content"
+          ref="mainNav"
+          class="w-full flex-grow lg:flex lg:content-center lg:items-center lg:w-auto justify-end lg:block mt-2 lg:mt-0"
+          :class="navHidden ? 'hidden' : null"
         >
-          <li
-            v-for="(item, i) in navigation.items"
-            :key="i"
-            class="mr-3 py-2 lg:py-0"
-          >
-            <nuxt-link
-              :to="item.to"
-              class="inline-block py-2 px-4 text-gray-900 font-bold no-underline"
-              >{{ item.name }}</nuxt-link
+          <ul v-if="navigation" class="list-reset lg:flex items-center">
+            <li
+              v-for="(item, i) in navigation.items"
+              :key="i"
+              class="py-2 lg:py-0"
             >
-          </li>
-        </ul>
-      </div>
+              <nuxt-link
+                :to="item.to"
+                class="inline-block py-2 px-4 text-gray-900 font-bold no-underline hover:text-red-600"
+                @click="navHide"
+                >{{ item.name }}</nuxt-link
+              >
+            </li>
+          </ul>
+        </div>
+      </transition>
     </div>
   </nav>
 </template>
@@ -69,13 +66,63 @@ import { mapState } from 'vuex'
 export default {
   name: 'DcNavigation',
   components: {},
+  props: {
+    offset: {
+      type: Number,
+      default: 0
+    }
+  },
+  data() {
+    return {
+      navHidden: true,
+      isFilled: false
+    }
+  },
   computed: {
     ...mapState(['navigation'])
   },
   methods: {
-    navToggle() {}
+    navToggle() {
+      this.navHidden = !this.navHidden
+    },
+    navHide() {
+      // eslint-ignore-next-line
+      console.log('navHide', this.navHidden)
+      this.navHidden = true
+    }
   }
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.nuxt-link-active,
+.nuxt-link-exact-active {
+  color: brown;
+}
+.avatar {
+  background-image: url('~assets/images/avatar.jpg');
+  background-size: cover;
+  background-position: top center;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+.topnav {
+  transition: all 0.5s;
+}
+
+/*.topnav__title {*/
+/*  color: white;*/
+/*}*/
+
+.slide-enter, .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  height: 0;
+}
+.filled {
+  @apply bg-white .shadow-sm;
+}
+
+/*.filled .topnav__title {*/
+/*  color: brown;*/
+/*}*/
+</style>

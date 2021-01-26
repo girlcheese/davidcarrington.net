@@ -1,11 +1,12 @@
 <template>
-  <div>
-    <dc-navigation :items="navigation"></dc-navigation>
+  <div @scroll="onScroll">
+    <dc-navigation :offset="yOffset"></dc-navigation>
     <nuxt />
     <dc-footer></dc-footer>
   </div>
 </template>
 <script>
+import { debounce } from 'lodash'
 import DcNavigation from '~/components/DcNavigation'
 import DcFooter from '~/components/DcFooter'
 
@@ -16,66 +17,24 @@ export default {
   },
   data() {
     return {
-      navigation: {
-        work: {
-          name: 'Work',
-          to: '/work',
-          subNav: [
-            {
-              name: 'Consultancy 2007-2020',
-              to: '/work/consultancy-projects'
-            },
-            {
-              name: 'Consultancy 2001-2006',
-              to: '/work/consultancy-projects-2001-2006'
-            },
-            {
-              name: 'Speaking Engagements 2007-2020',
-              to: '/work/speaking-engagements'
-            },
-            {
-              name: 'Speaking Engagements 2001-2006',
-              to: '/work/speaking-engagements-2001-2006'
-            },
-            {
-              name: 'Mentor/Staff Development',
-              to: '/work/mentoring'
-            },
-            {
-              name: 'Joint Venture',
-              to: '/work/joint-venture'
-            }
-          ]
-        },
-        boards: {
-          name: 'Boards & Committees',
-          to: '/board-committee-membership/'
-        },
-        articles: {
-          name: 'Articles & Talks',
-          to: '/articles-talks',
-          subNav: [
-            {
-              name: 'Commissioned Reports',
-              to: '/articles-talks/reports'
-            }
-          ]
-        },
-        career: {
-          name: 'Career',
-          to: '/career-summary'
-        },
-        contact: {
-          name: 'Contact',
-          to: '/contact'
-        }
-      }
+      yOffset: null
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', debounce(this.onScroll))
+  },
+  destroyed() {
+    window.removeEventListener('scroll', debounce(this.onScroll))
+  },
+  methods: {
+    onScroll() {
+      this.yOffset = window.scrollY
     }
   },
   head() {
     return {
       bodyAttrs: {
-        class: 'bg-gray-100 tracking-wider tracking-normal'
+        class: 'bg-gray-100 tracking-normal'
       }
     }
   }
